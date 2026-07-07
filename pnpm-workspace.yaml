@@ -9,6 +9,10 @@ allowBuilds:
   unrs-resolver: true
 catalog:
   electron: '42.5.0'
+  vite: npm:@voidzero-dev/vite-plus-core@0.0.0-commit.fd1ae7eab160c92f3907a20e80e92d2e87403c20
+  vitest: 4.1.9
+  vite-plus: 0.0.0-commit.fd1ae7eab160c92f3907a20e80e92d2e87403c20
+  '@vitest/coverage-v8': 4.1.9
 overrides:
   react-is: '19.2.7'
   # Force patched versions of transitive dev-tooling deps pulled in by
@@ -17,4 +21,24 @@ overrides:
   cross-spawn: '7.0.6'
   got: '11.8.6'
   electron: 'catalog:'
+  vite: 'catalog:'
+  vitest: 'catalog:'
 savePrefix: ''
+peerDependencyRules:
+  allowAny:
+    - vite
+    - vitest
+  allowedVersions:
+    vite: '*'
+    vitest: '*'
+minimumReleaseAgeExclude:
+  - '@voidzero-dev/vite-plus-core@0.0.0-commit.fd1ae7eab160c92f3907a20e80e92d2e87403c20'
+  - '@voidzero-dev/vite-plus-darwin-arm64@0.0.0-commit.fd1ae7eab160c92f3907a20e80e92d2e87403c20'
+  - '@voidzero-dev/vite-plus-darwin-x64@0.0.0-commit.fd1ae7eab160c92f3907a20e80e92d2e87403c20'
+  - '@voidzero-dev/vite-plus-linux-arm64-gnu@0.0.0-commit.fd1ae7eab160c92f3907a20e80e92d2e87403c20'
+  - '@voidzero-dev/vite-plus-linux-arm64-musl@0.0.0-commit.fd1ae7eab160c92f3907a20e80e92d2e87403c20'
+  - '@voidzero-dev/vite-plus-linux-x64-gnu@0.0.0-commit.fd1ae7eab160c92f3907a20e80e92d2e87403c20'
+  - '@voidzero-dev/vite-plus-linux-x64-musl@0.0.0-commit.fd1ae7eab160c92f3907a20e80e92d2e87403c20'
+  - '@voidzero-dev/vite-plus-win32-arm64-msvc@0.0.0-commit.fd1ae7eab160c92f3907a20e80e92d2e87403c20'
+  - '@voidzero-dev/vite-plus-win32-x64-msvc@0.0.0-commit.fd1ae7eab160c92f3907a20e80e92d2e87403c20'
+  - vite-plus@0.0.0-commit.fd1ae7eab160c92f3907a20e80e92d2e87403c20
