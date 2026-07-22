@@ -108,7 +108,7 @@
     "@types/react-router-dom": "5.3.3",
     "@types/semver": "7.7.1",
     "@vitejs/plugin-react": "6.0.3",
-    "@vitest/coverage-v8": "4.1.10",
+    "@vitest/coverage-v8": "catalog:",
     "clsx": "2.1.1",
     "concurrently": "10.0.3",
     "date-fns": "4.4.0",
@@ -125,11 +125,11 @@
     "tailwind-merge": "3.6.0",
     "tailwindcss": "4.3.3",
     "typescript": "7.0.2",
-    "vite": "8.1.5",
+    "vite": "catalog:",
     "vite-plugin-checker": "0.14.4",
     "vite-plugin-electron": "1.1.0",
-    "vite-plus": "0.2.5",
-    "vitest": "4.1.10",
+    "vite-plus": "catalog:",
+    "vitest": "catalog:",
     "zustand": "5.0.14"
   },
   "engines": {

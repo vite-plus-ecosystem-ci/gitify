@@ -1,5 +1,5 @@
 import react from '@vitejs/plugin-react';
-import { defineConfig } from 'vitest/config';
+import { defineConfig } from 'vite-plus';
 
 // Set a stable timezone before any workers start so that Intl (used by
 // @primer/react's RelativeTime component) always formats dates in UTC,
