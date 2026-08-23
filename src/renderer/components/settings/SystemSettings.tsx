@@ -67,6 +67,7 @@ export const SystemSettings: FC = () => {
         return;
       }
       setRecordingShortcut(false);
+      setLiveModifierAccelerator('');
     };
 
     document.addEventListener('pointerdown', onPointerDown, true);
@@ -77,7 +78,6 @@ export const SystemSettings: FC = () => {
 
   useEffect(() => {
     if (!recordingShortcut) {
-      setLiveModifierAccelerator('');
       return;
     }
 

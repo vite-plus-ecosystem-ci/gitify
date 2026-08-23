@@ -1,5 +1,5 @@
 import type React from 'react';
-import { useState } from 'react';
+import { createElement, useState } from 'react';
 
 import { Avatar, Stack, Truncate } from '@primer/react';
 
@@ -26,13 +26,16 @@ export const AvatarWithFallback: React.FC<AvatarWithFallbackProps> = ({
   const [hasBrokenAvatarSource, setHasBrokenAvatarSource] = useState(false);
 
   const isNonHuman = isNonHumanUser(userType);
-  const DefaultUserIcon = getDefaultUserIcon(userType);
+  // `getDefaultUserIcon` returns one of a few module-level icon components, so
+  // this is a lookup rather than a component defined during render. Rendering it
+  // through `createElement` keeps that clear to `react/static-components`.
+  const defaultUserIcon = getDefaultUserIcon(userType);
 
   // TODO explore using AnchoredOverlay component (https://primer.style/components/anchored-overlay/react/alpha) to render Avatar Card on hover
   return (
     <Stack align="center" data-testid="avatar" direction="horizontal" gap="condensed">
       {!src || hasBrokenAvatarSource ? (
-        <DefaultUserIcon size={size} />
+        createElement(defaultUserIcon, { size })
       ) : (
         <Avatar
           alt={alt}
