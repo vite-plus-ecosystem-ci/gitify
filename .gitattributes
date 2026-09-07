@@ -9,3 +9,6 @@ src/renderer/**/__screenshots__/**/*.png binary linguist-generated=true
 
 # GraphQL Codegen outputs
 src/renderer/utils/api/graphql/generated/**/*.ts linguist-generated=true
+
+# Keep dependency patches parseable after a Windows checkout.
+*.patch text eol=lf
