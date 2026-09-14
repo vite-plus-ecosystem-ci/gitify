@@ -1,0 +1,35 @@
+# Ecosystem migration comparison. Remove this workflow after the test cycle.
+name: Vite+ Windows migration comparison
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  migrate:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        version:
+          - '0.3.1'
+          - '0.0.0-commit.6b5bbcaf494b963b67950e77a7673de21ba9c6d5'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: '13eec8b85d05bc2a33d52849a72af293200d4af6'
+          persist-credentials: false
+      - uses: voidzero-dev/setup-vp@9fd26ff49f9b5e6276c2b493da4454ad4527f7f4 # v1.20.0
+        with:
+          version: ${{ matrix.version }}
+          run-install: false
+          cache: false
+      - name: Migrate the same project base
+        run: vp migrate . --no-interactive
+      - name: Check installed versions
+        run: vp --version
+      - name: Reinstall patched dependencies
+        run: vp install --force --frozen-lockfile
