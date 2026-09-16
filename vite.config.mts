@@ -92,6 +92,7 @@ const reactDevToolsPlugin = (): Plugin => ({
 const isBuild = process.argv.includes('build');
 
 export default defineConfig({
+  test: { clearMocks: false },
   plugins: [
     // only run the checker plugin in dev (not during `vite build`)
     ...(isBuild

@@ -16,6 +16,7 @@ const MENUBAR_VIEWPORT = { width: 500, height: 400 };
 export default defineConfig({
   plugins: [react()],
   test: {
+    sharedViteServer: false,
     globals: true,
     pool: 'vmThreads',
     isolate: false,
@@ -84,6 +85,7 @@ export default defineConfig({
           // create per-platform baselines and pass against them.
           globalSetup: ['./src/renderer/__helpers__/visual.global-setup.ts'],
           browser: {
+            locators: { exact: false },
             enabled: true,
             headless: true,
             provider: playwright({
