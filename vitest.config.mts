@@ -16,6 +16,11 @@ const MENUBAR_VIEWPORT = { width: 500, height: 400 };
 export default defineConfig({
   plugins: [react()],
   test: {
+    // Vitest v4 compatibility: keep separate Vite servers for inline projects.
+    // Remove when plugins and config hooks can run once for shared projects.
+    // https://rfc-vitest-v5-upgrade-viteplus-dev.voidzero-docs.workers.dev/guide/vitest-v5#remove-unneeded-compatibility-settings
+    // https://vitest.dev/guide/migration/#inline-projects-share-the-vite-server-by-default
+    sharedViteServer: false,
     globals: true,
     pool: 'vmThreads',
     isolate: false,
@@ -84,6 +89,13 @@ export default defineConfig({
           // create per-platform baselines and pass against them.
           globalSetup: ['./src/renderer/__helpers__/visual.global-setup.ts'],
           browser: {
+            locators: {
+              // Vitest v4 compatibility: keep partial, case-insensitive locator matching.
+              // Remove after updating locators for full, case-sensitive matches.
+              // https://rfc-vitest-v5-upgrade-viteplus-dev.voidzero-docs.workers.dev/guide/vitest-v5#remove-unneeded-compatibility-settings
+              // https://vitest.dev/guide/migration/#locators-are-strict-by-default
+              exact: false,
+            },
             enabled: true,
             headless: true,
             provider: playwright({
