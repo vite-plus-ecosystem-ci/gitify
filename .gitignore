@@ -36,3 +36,4 @@ src/renderer/**/__screenshots__/**/*.png
 
 # OpenSpec
 openspec/
+.vitest/
