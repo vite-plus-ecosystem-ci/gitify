@@ -39,3 +39,4 @@ openspec/
 
 # Local Git worktrees
 /.worktrees/
+.vitest/
