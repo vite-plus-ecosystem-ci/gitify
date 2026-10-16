@@ -18,6 +18,23 @@ catalog:
   '@vitest/browser-playwright': 5.1.0
   '@vitest/coverage-v8': 5.1.0
 minimumReleaseAgeExclude:
+  # ecosystem-ci smoke test: preview builds and freshly pinned toolchain packages
+  - vite-plus
+  - '@voidzero-dev/*'
+  - '@oxc-project/*'
+  - oxlint
+  - '@oxlint/*'
+  - oxfmt
+  - '@oxfmt/*'
+  - oxlint-tsgolint
+  - '@oxlint-tsgolint/*'
+  - vitest
+  - '@vitest/*'
+  - tinybench
+  - yuku-core
+  - yuku-parser
+  - '@yuku-core/*'
+  - '@yuku-toolchain/*'
   - electron-menubar
 overrides:
   react-is: '19.3.1'
