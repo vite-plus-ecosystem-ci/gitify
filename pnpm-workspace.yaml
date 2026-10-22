@@ -9,9 +9,9 @@ allowBuilds:
   unrs-resolver: true
 catalog:
   electron: '44.7.2'
-  vite: npm:@voidzero-dev/vite-plus-core@1.3.0
+  vite: npm:@voidzero-dev/vite-plus-core@0.0.0-commit.6bc2d240a024170c08fbc831f0c201c162afd22e
   vitest: 5.0.5
-  vite-plus: 1.3.0
+  vite-plus: 0.0.0-commit.6bc2d240a024170c08fbc831f0c201c162afd22e
   '@vitest/browser-playwright': 5.0.5
   '@vitest/coverage-v8': 5.0.5
 minimumReleaseAgeExclude:
