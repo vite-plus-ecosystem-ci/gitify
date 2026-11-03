@@ -1,4 +1,4 @@
-import { vi } from 'vitest';
+import { vi } from 'vite-plus/test';
 
 /**
  * Application code logs expected failures in tests that exercise error paths
