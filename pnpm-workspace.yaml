@@ -12,12 +12,29 @@ allowBuilds:
   unrs-resolver: true
 catalog:
   electron: '45.2.1'
-  vite: npm:@voidzero-dev/vite-plus-core@1.4.0
-  vitest: 5.0.5
-  vite-plus: 1.4.0
-  '@vitest/browser-playwright': 5.0.5
-  '@vitest/coverage-v8': 5.0.5
+  vite: npm:@voidzero-dev/vite-plus-core@0.0.0-commit.b310e71f11353a85781d2d0e0e0bfe149e0f55a2
+  vitest: 5.1.0
+  vite-plus: 0.0.0-commit.b310e71f11353a85781d2d0e0e0bfe149e0f55a2
+  '@vitest/browser-playwright': 5.1.0
+  '@vitest/coverage-v8': 5.1.0
 minimumReleaseAgeExclude:
+  # ecosystem-ci smoke test: preview builds and freshly pinned toolchain packages
+  - vite-plus
+  - '@voidzero-dev/*'
+  - '@oxc-project/*'
+  - oxlint
+  - '@oxlint/*'
+  - oxfmt
+  - '@oxfmt/*'
+  - oxlint-tsgolint
+  - '@oxlint-tsgolint/*'
+  - vitest
+  - '@vitest/*'
+  - tinybench
+  - yuku-core
+  - yuku-parser
+  - '@yuku-core/*'
+  - '@yuku-toolchain/*'
   - electron-menubar
 overrides:
   react-is: '19.3.1'

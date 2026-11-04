@@ -1,4 +1,4 @@
-import { afterEach, beforeEach, type MockInstance, vi } from 'vitest';
+import { afterEach, beforeEach, type MockInstance, vi } from 'vite-plus/test';
 
 /**
  * Restore spies created inside a test (or its hooks) after each test.
