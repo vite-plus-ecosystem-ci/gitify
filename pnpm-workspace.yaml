@@ -12,9 +12,9 @@ allowBuilds:
   unrs-resolver: true
 catalog:
   electron: '45.3.1'
-  vite: npm:@voidzero-dev/vite-plus-core@1.6.0
+  vite: npm:@voidzero-dev/vite-plus-core@0.0.0-commit.309b96aaf065d95452ca218076c666671cf36440
   vitest: 5.1.0
-  vite-plus: 1.6.0
+  vite-plus: 0.0.0-commit.309b96aaf065d95452ca218076c666671cf36440
   '@vitest/browser-playwright': 5.1.0
   '@vitest/coverage-v8': 5.1.0
 minimumReleaseAgeExclude:
@@ -36,6 +36,15 @@ minimumReleaseAgeExclude:
   - '@yuku-core/*'
   - '@yuku-toolchain/*'
   - electron-menubar
+  - '@tsrs/darwin-arm64@7.1.0-beta.tsrs2'
+  - '@tsrs/darwin-x64@7.1.0-beta.tsrs2'
+  - '@tsrs/linux-arm64-gnu@7.1.0-beta.tsrs2'
+  - '@tsrs/linux-arm64-musl@7.1.0-beta.tsrs2'
+  - '@tsrs/linux-x64-gnu@7.1.0-beta.tsrs2'
+  - '@tsrs/linux-x64-musl@7.1.0-beta.tsrs2'
+  - '@tsrs/win32-arm64@7.1.0-beta.tsrs2'
+  - '@tsrs/win32-x64@7.1.0-beta.tsrs2'
+  - tsrs@7.1.0-beta.tsrs2
 overrides:
   react-is: '19.3.1'
   # Force patched versions of transitive dev-tooling deps pulled in by
