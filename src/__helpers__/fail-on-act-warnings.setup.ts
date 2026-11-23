@@ -1,4 +1,4 @@
-import { afterEach, beforeEach } from 'vitest';
+import { afterEach, beforeEach } from 'vite-plus/test';
 
 /**
  * Fail a test when React reports an update outside `act(...)`.
